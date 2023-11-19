@@ -1,0 +1,341 @@
+﻿<Page 
+     
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:ii="clr-namespace:patients"
+    x:Class="patients.patientcard"
+      mc:Ignorable="d" 
+      FlowDirection="RightToLeft"    
+      Title="patientcards" SnapsToDevicePixels="True" 
+    dx:ThemeManager.ThemeName="MetropolisLight">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ViewResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+
+    <Grid Background="Beige"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Height="auto"  x:Name="gridmain" Margin="5" Width="auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="colw"  Width="500*" MinWidth="500" />
+            <ColumnDefinition x:Name="gridmainw"  Width="500*"  MinWidth="500" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition  Height="365*" />
+
+        </Grid.RowDefinitions>
+        <Border
+            Grid.Row="1"
+             x:Name="treeborder2"
+            Grid.Column="0"
+            Margin="5,5,5,5"
+            Background="#fff"
+            BorderBrush="#af9157"
+            BorderThickness="2" CornerRadius="3">
+            <Grid Background="Beige"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Height="auto"  x:Name="gridmain12" Margin="5" Width="auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="500*" MinWidth="50" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="500*"/>
+                    <RowDefinition Height="500*" />
+
+
+                </Grid.RowDefinitions>
+
+
+
+                <Grid   Grid.Row="0" x:Name="infogrid"
+                    Grid.Column="0"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Height="auto"   Margin="5" Width="auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  Width="100*" MinWidth="50" />
+                        <ColumnDefinition  Width="100*"  MinWidth="50" />
+                        <ColumnDefinition  Width="100*" MinWidth="50" />
+                        <ColumnDefinition  Width="100*"  MinWidth="50" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45*" MinHeight="40"/>
+                        <RowDefinition Height="45*"  MinHeight="40" />
+                        <RowDefinition Height="45*" MinHeight="40"/>
+                        <RowDefinition Height="45*"  MinHeight="40"/>
+                        <RowDefinition Height="45*" MinHeight="40"/>
+                        <RowDefinition Height="45*"  MinHeight="40"/>
+
+
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                    x:Name="Birthday"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                 
+         Margin="5"
+                   />
+                    <TextBox
+                    x:Name="age"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                 Margin="5"
+         
+                   />
+                    <TextBox
+                    x:Name="CardDat"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                 Margin="5"
+         
+                   />
+
+                    <TextBox
+                    x:Name="Address"
+                    Grid.Row="1"
+                    Grid.Column="1"
+              Margin="5"
+         
+                   />
+                    <TextBox
+                    x:Name="MobilePhone"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                Margin="5"
+       
+                   />
+                    <TextBox
+                    x:Name="HomePhone"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                Margin="5"
+                   />
+                    <Label Grid.Row="0"  Grid.Column="0" Content="العمر" />
+                    <Label Grid.Row="0"  Grid.Column="2" Content="سنة الميلاد" />
+
+                    <Label Grid.Row="1"  Grid.Column="2" Content="تاريخ أول زيارة" />
+                    <Label Grid.Row="1"  Grid.Column="0" Content="العنوان" />
+                    <Label Grid.Row="2"  Grid.Column="2" Content="موبايل" />
+                    <Label Grid.Row="2"  Grid.Column="0" Content="أرضي" />
+                    <Label x:Name="storylabal" Grid.Row="3"  Grid.Column="0" Content="القصة المرضية" />
+                    <Label Grid.Row="4"  Grid.Column="0" Content="MainComplaint" />
+                    <Label Grid.Row="5"  Grid.Column="0" Content="FirstDiagnosis" />
+                    <RichTextBox x:Name="SickStory"  InputLanguageManager.InputLanguage="ar-sa" FontFamily="Traditional Arabic" FontSize="22" Padding="5" Margin="5" Grid.Row="3"  Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="3" VerticalScrollBarVisibility="Visible"/>
+                    <RichTextBox x:Name="MainComplaint"  InputLanguageManager.InputLanguage="ar-sa" FontFamily="Traditional Arabic" FontSize="22" Padding="5" Margin="5" Grid.Row="4"  Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="3" VerticalScrollBarVisibility="Visible"/>
+                    <RichTextBox x:Name="FirstDiagnosis"  InputLanguageManager.InputLanguage="ar-sa" FontFamily="Traditional Arabic" FontSize="22" Padding="5" Margin="5" Grid.Row="5"  Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="3" VerticalScrollBarVisibility="Visible"/>
+                </Grid>
+
+                <Grid Grid.Row="1"
+                    Grid.Column="0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Height="auto"   Width="auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  Width="500*" MinWidth="50" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="500*"/>
+                        <RowDefinition Height="500*" />
+
+
+                    </Grid.RowDefinitions>
+
+                    <ScrollViewer Margin="7">
+                        <RichTextBox x:Name="FirstDiagnosisdd"  InputLanguageManager.InputLanguage="ar-sa" FontFamily="Traditional Arabic" FontSize="22" Margin="0" Grid.Row="0"  Grid.Column="0"  VerticalScrollBarVisibility="Disabled"/>
+
+
+                    </ScrollViewer>
+                </Grid>
+
+
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0"   BorderThickness="0">
+            <Grid x:Name="lllll2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="53*"/>
+                    <ColumnDefinition Width="58*"/>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="47*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="42*"/>
+                    <ColumnDefinition Width="98*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="56*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="30*"/>
+
+
+
+
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+
+                </Grid.RowDefinitions>
+                <TextBox ToolTip="كلمة البحث" KeyDown="textsearchh_KeyDown"  x:Name="Name" FontFamily="nott" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Grid.Column="2"  Grid.Row="0"  SelectionChanged="txtsearch_SelectionChanged" Margin="0"/>
+                <Label Grid.Row="0"  Grid.Column="1" Content="الاسم" />
+                <dx:SimpleButton ToolTip="البداية" Grid.Row="0" Grid.Column="3" Click="firstpageButtonDown" Margin="2,0,2,0" Glyph="{dx:DXImage SvgImages/Arrows/DoubleLast.svg}" />
+                <dx:SimpleButton ToolTip="السابق"  Grid.Row="0" Grid.Column="4" Click="prevpageButtonDown" Margin="2,0,2,0" Glyph="{dx:DXImage SvgImages/Arrows/Next.svg}" />
+                <TextBox
+                    x:Name="txtnumber"
+                    Grid.Row="0"
+                    Grid.Column="5"
+                    KeyDown="textnumpage_KeyDown"
+                   ToolTip="رقم الصفحة: أو إدخال رقم الصفحة وإدخال للذهاب إلى الصفحة"
+                    TextAlignment="Center" Margin="0"/>
+                <!--<Label    Visibility="Hidden" Content="الجزء" Grid.Row="0" Grid.Column="8"  Margin="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>-->
+
+
+                <!--<TextBox
+                    x:Name="textnumpart"
+                    Grid.Row="0"
+                    Visibility="Hidden"
+                    Grid.Column="8"
+                    TextAlignment="Center" Margin="2,0,2,0" />-->
+                <!--<StackPanel
+                    Grid.Row="0"
+                    Grid.Column="7"
+                    HorizontalAlignment="Stretch"
+                    Cursor="Hand"
+                    MouseLeftButtonDown="nextpageButtonDown" Margin="0,0,7,0">
+                    <Image Height="25" Source="Next_32x32.png"  Margin="0,0,0,0"/>-->
+
+                <!--</StackPanel>-->
+                <dx:SimpleButton ToolTip="التالي" Grid.Row="0" Grid.Column="6" Click="nextpageButtonDown" Margin="2,0,2,0" Glyph="{dx:DXImage SvgImages/Arrows/Prev.svg}" />
+                <dx:SimpleButton ToolTip="الأخير" Grid.Row="0" Grid.Column="7" Click="lastpageButtonDown" Margin="2,0,2,0" Glyph="{dx:DXImage SvgImages/Arrows/DoubleFirst.svg}" />
+                <!--<ComboBox ItemsSource="{Binding}" DisplayMemberPath = "txtname" SelectedValuePath = "ID" x:Name="txtsearch"  IsEditable="true" TextBoxBase.TextChanged="ComboBox_TextChanged" IsDropDownOpen="False" Grid.Column="11"  Grid.Row="0"  SelectionChanged="txtsearch_SelectionChanged" FontFamily="Adobe Arabic" FontSize="20"/>-->
+
+                <dx:SimpleButton Click="savecard"   Visibility="Hidden" Grid.Column="8"  Margin="3,0" Tag="" ToolTip="نسخ"/>
+                <dx:SimpleButton Grid.Column="9" Visibility="Hidden"  Margin="3,0" ToolTip="نسخ التحديد"/>
+                <dx:SimpleButton x:Name="hideframe" Grid.Column="10" Click="hideimg" Margin="3,0"  Glyph="{dx:DXImage 'Images/Actions/Hide_32x32.png'}"   ToolTip="إخفاء المخطوط" IsThreeState="True"/>
+
+
+
+                <dx:SimpleButton Grid.Row="0" Grid.Column="11" x:Name="zoomin" Glyph="{dx:DXImage 'Images/Zoom/ZoomIn_32x32.png'}" Click="zoomin_Click"  ToolTip="+" Margin="0,0,0,0"  />
+
+
+                <TextBox Grid.Row="0" Grid.Column="12" KeyDown="zoomtxt_KeyDown" x:Name="zoomtxt" FontFamily="nott" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0" Height="28"/>
+
+                <dx:SimpleButton Grid.Row="0" Grid.Column="13" x:Name="zoomout" Glyph="{dx:DXImage 'Images/Zoom/ZoomOut_32x32.png'}" Click="zoomout_Click" ToolTip="-" Margin="0,0,0,0"/>
+
+
+
+
+            </Grid>
+        </Border>
+        <Grid   Grid.Column="1" Grid.Row="1" Margin="1,1,10,1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="400*" />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="182*" MinHeight="182"/>
+
+            </Grid.RowDefinitions>
+
+
+
+
+            <Border x:Name="imgborder"
+            Grid.Row="0"
+          CornerRadius="3"
+            Grid.Column="0"
+            Margin="5"
+            Background="#fff"
+            BorderBrush="#af9157"
+            BorderThickness="2" Grid.ColumnSpan="2"  
+                   
+                    >
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform AngleY="0.198" />
+                        <RotateTransform />
+                        <TranslateTransform Y="1.497" />
+                    </TransformGroup>
+                </Border.RenderTransform>
+
+                <Grid Background="Beige" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="auto" x:Name="gridmain2" Margin="5" Width="auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="colw2" Width="500*" MinWidth="500" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid Background="Beige" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="auto" x:Name="gridmain3" Margin="5" Width="auto">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*" MinWidth="30" />
+                            <ColumnDefinition Width="20*" MinWidth="30" />
+                            <ColumnDefinition Width="50*" MinWidth="50" />
+                            <ColumnDefinition Width="20*" MinWidth="30" />
+                            <ColumnDefinition Width="20*" MinWidth="30" />
+                            <ColumnDefinition Width="20*" MinWidth="30" />
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <dx:SimpleButton ToolTip="البداية" Grid.Row="0" Grid.Column="0" Click="firstpageButtonDown2" Margin="2,0,2,0" Glyph="{dx:DXImage SvgImages/Arrows/DoubleLast.svg}" />
+                        <dx:SimpleButton ToolTip="السابق" Grid.Row="0" Grid.Column="1" Click="prevpageButtonDown2" Margin="2,0,2,0" Glyph="{dx:DXImage SvgImages/Arrows/Next.svg}" />
+                        <TextBox
+ x:Name="textnumpage2"
+ Grid.Row="0"
+ Grid.Column="2"
+ KeyDown="textnumpage_KeyDown"
+ ToolTip="رقم الصفحة: أو إدخال رقم الصفحة وإدخال للذهاب إلى الصفحة"
+ TextAlignment="Center" Margin="2,0"/>
+                        <dx:SimpleButton ToolTip="التالي" Grid.Row="0" Grid.Column="3" Click="nextpageButtonDown2" Margin="2,0,2,0" Glyph="{dx:DXImage SvgImages/Arrows/Prev.svg}" />
+                        <dx:SimpleButton ToolTip="الأخير" Grid.Row="0" Grid.Column="4" Click="lastpageButtonDown2" Margin="2,0,2,0" Glyph="{dx:DXImage SvgImages/Arrows/DoubleFirst.svg}" />
+                    </Grid>
+                    <ScrollViewer x:Name="imgscrall" Grid.Column="0" Grid.Row="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Margin="0,10,7,10" RenderTransformOrigin="0.5,0.5">
+                        <ScrollViewer.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ScrollViewer.RenderTransform>
+
+                        <Canvas x:Name="Cnv" HorizontalAlignment="Center" VerticalAlignment="Center" FlowDirection="LeftToRight" Panel.ZIndex="1" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible">
+
+                            <Image  Stretch="Fill" x:Name="imgpreview" Panel.ZIndex="0" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="-1"/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+
+                            </Image>
+
+
+                        </Canvas>
+
+                    </ScrollViewer>
+
+                </Grid>
+
+
+            </Border>
+
+
+        </Grid>
+
+
+
+    </Grid>
+
+</Page>
